@@ -43,7 +43,7 @@ def get_gateway_ip():
 
 def get_internal_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.connect(("8.8.8.8", 80))
+    s.connect(("8.8.8.8", 8080))
     private_ip = s.getsockname()[0]
     s.close()
     return private_ip
